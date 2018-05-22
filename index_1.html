@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="node_modules/primeui/primeui-all.css" />
+
+    <script type="application/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="application/javascript" src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+    <script type="application/javascript" src="node_modules/primeui/primeui-all.js"></script>
+    <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="main_1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            
+            
+            
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#empProfile">Employee Profile<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="tab"  href="#empTbl" class="active">View Employee List</a></li>
+                            <li><a data-toggle="tab" href="#addNew">Add New</a></li>
+                        </ul>
+                    </li>
+                    <li><a data-toggle="tab" href="#msgs" id="msgsMenu">Messages</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="empTbl" class="tab-pane fade in active">                     
+                        <h3>Employee Table Information</h3>
+                        <div class="line"></div>
+                        <label for="empSearch">Search employee </label>
+                            <input id="empSearch" placeholder="Enter name/email"/>
+                        <div id="displayEmp">
+                            <!--/List of employees -->
+                        </div> <!--/end row-->                        
+                    </div>
+                    <div id="addNew" class="tab-pane fade">
+                        <h3>Add New Employee</h3>
+                        <div class="line"></div>
+                        
+                        <div class="row">
+                            <form>
+                                <div class="form-group">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="lastname" class="form-control" id="lastname" placeholder="Enter Last name" name="lastname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="firstname" class="form-control" id="firstname" placeholder="Enter First name" name="firstname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                </div>
+                                <button type="button" class="btn btn-default btnSubmit">Submit</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </form>
+                        </div> <!--/end row--> 
+                    </div>
+                    <div id="msgs" class="tab-pane fade">
+                        <div class="panel panel-info widget">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <span class="glyphicon glyphicon-comment"></span>
+                                        <h3 class="panel-title">Messages</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form class="search-form">
+                                            <div class="form-group has-feedback">
+                                                <label for="search" class="sr-only">Search</label>
+                                                <input type="text" class="form-control" id="searchMsg"name="searcheee" placeholder="search message by ID ">
+                                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                            </div>
+                                        </form>    
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-primary btnCompose" data-toggle="modal" data-target="#modalCompose">Compose Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-md-1">
+                                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" />
+                                            </div>
+                                            <div class="col-xs-10 col-md-11">
+                                                <div>
+                                                    <a href="#">SUBJECT</a>
+                                                    <div class="msg-info">
+                                                        From: <a href="#" data-toggle="popover" data-placement="right" data-content="content">from@employee.com</a> on 12 Jun 2014 <br>
+                                                        To: <a href="#">to@employee.com</a>
+                                                    </div>
+                                                    <div class="msg-body">
+                                                        We would like to congratulate John on his achievement...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal fade" role="dialog" id="modalCompose">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title">Compose Message</h4>
+                                    </div>
+                                    <div class="modal-body ui-front">
+                                        <form role="form" class="form-horizontal">
+                                                
+                                            <div class="form-group" autocomplete="off">
+                                            <label class="col-sm-2" for="inputTo">To</label>
+                                            <div class="col-sm-10"><input type="email" class="form-control" id="inputTo" placeholder="Input email"></div>
+                                            <div id="growl"></div>
+                                            </div>
+                                            <div class="form-group">
+                                            <label class="col-sm-2" for="inputSubject">Subject</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" id="inputSubject" placeholder="subject"></div>
+                                            </div>
+                                            <div class="form-group">
+                                            <label class="col-sm-12" for="inputBody">Message</label>
+                                            <div class="col-sm-12"><textarea class="form-control" id="inputBody" rows="18"></textarea></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button> 
+                                        <button type="button" class="btn btn-primary btnSend">Send</button>
+                                    </div>
+                                    </div><!--/modal-content -->
+                                </div><!--/modal-dialog -->
+                            </div><!--/modal compose message -->
+                        </div>
+
+                    </div>
+                </div> <!--/Tab Content-->
+            </div>
+        </div>
+    </div>
+                    
+</body>
+</html>

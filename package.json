@@ -1,0 +1,22 @@
+{
+  "name": "websmarthome",
+  "version": "1.0.0",
+  "description": "Web Smart Home",
+  "main": "main_1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.netsystem.local:1022/stephanie/websample.git"
+  },
+  "author": "istephielicious@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "primeui": "^4.1.15"
+  }
+}

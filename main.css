@@ -1,0 +1,144 @@
+/**CSS DOCUMENT*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.0em !important; 
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #337ab8;
+}
+.container {
+    padding-top: 50px;
+}
+
+.line {
+    width: auto;
+    height: 1px;
+    border-bottom: 1px dashed #337ab8;
+    margin: 30px 0;
+}
+
+.icon-line {
+    width: auto;
+    border-bottom: 1px dashed #337ab8;
+}
+
+#selectFlr {
+    width: 200px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+#rowAddNewDev {
+    visibility: none;
+}
+
+.widget .panel-title { display:inline }
+
+/*index_1.html-- SEARCH BAR*/
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+    display: none;
+}
+.search-form .form-group {
+    float: right !important;
+    transition: all 0.35s, border-radius 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+    padding-right: 20px;
+    border: 0 none;
+    background: transparent;
+    box-shadow: none;
+    display:block;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 100%;
+  border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
+}
+
+.ui-autocomplete-panel {
+    z-index: 9999 !important;
+    width: auto !important
+}
+
+.ui-column-filter{
+    display: none !important;
+}
+
+/**************************/
+/** SIDE NAVIGATION BAR **/
+/************************
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 50;
+    left: 50;
+    background-color: #9bb9d5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+**/
